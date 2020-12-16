@@ -1,0 +1,13 @@
+<h1>User App</h1>
+<h2>Users</h2>
+<ul>
+  <li *ngFor="let user of users" (click)="onSelect(user)">
+    <p> {{user.firstName}} {{user.lastName}}</p>
+  </li>
+</ul>
+
+  <div *ngIf="thisUser">
+    <h2>{{thisUser.email}} update info:</h2>
+    <input [(ngModel)]="thisUser.firstName">
+    <button (click)="changeUserInfo()">Change user info</button>
+  </div>
