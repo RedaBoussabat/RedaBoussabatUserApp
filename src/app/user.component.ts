@@ -20,7 +20,7 @@ export class UserComponent implements OnInit {
   // Call subscribe() to start listening for updates
   getUsers(): void {
     // polling
-    timer(0, 10000)
+    timer(0, 20000)
       .subscribe(() => {
         this.userService.getUsers()
           .subscribe(data => this.users = data);

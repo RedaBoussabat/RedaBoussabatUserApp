@@ -19,7 +19,14 @@ export class UserService {
 
 
   changeUserInfo(thisUser: User): void {
-    let body = new HttpParams().append('firstName', thisUser.firstName).append('email', thisUser.email);
+
+    let body = new HttpParams()
+      .append('firstName', thisUser.firstName)
+      .append('lastName', thisUser.lastName)
+      .append('email', thisUser.email)
+      .append('gsm', thisUser.gsm)
+      .append('password', thisUser.password);
+
 
     const header = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
 

@@ -8,6 +8,12 @@
 
   <div *ngIf="thisUser">
     <h2>{{thisUser.email}} update info:</h2>
-    <input [(ngModel)]="thisUser.firstName">
+    <table>
+      <tr><input [(ngModel)]="thisUser.firstName"></tr>
+      <tr><input [(ngModel)]="thisUser.lastName"></tr>
+      <tr><input [(ngModel)]="thisUser.email"></tr>
+      <tr><input [(ngModel)]="thisUser.gsm"></tr>
+      <tr><input [(ngModel)]="thisUser.password"></tr>
+    </table>
     <button (click)="changeUserInfo()">Change user info</button>
   </div>

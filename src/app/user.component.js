@@ -16,7 +16,7 @@ var UserComponent = /** @class */ (function () {
   }
   UserComponent.prototype.getUsers = function () {
     var _this = this;
-    rxjs_1.timer(0, 2500).subscribe(function () {
+    rxjs_1.timer(0, 20000).subscribe(function () {
       _this.userService.getUsers().subscribe(function (data) { return _this.users = data; });
     });
   };
